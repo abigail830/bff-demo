@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: bff-demo
+server:
+  port: 8090
+graphql:
+  servlet:
+    mapping: /graphql
+    enabled: true
+    exception-handlers-enabled: true
+  tools:
+    schema-location-pattern: "**/*.graphqls"
+graphiql:
+  enabled: true
+  cdn:
+    enabled: true
+    version: 0.17.5
+#graphiql:
+#  headers:
+#    Authorization: "Bearer 05bd9a5f3fe0408f89520946b0fe1b06"
+logging:
+  level:
+    com:
+      oembedler:
+        moon:
+          graphql:
+            boot:
+              error: debug

@@ -1,0 +1,18 @@
+type Query {
+    getEmptyTest(systemId: Int!, numberPerPage: Int!, currentPageNumber: Int!): MethodInfoList
+}
+
+type MethodInfoList {
+    count: Int!
+    currentPageNumber: Int!
+    data: [MethodInfo]
+}
+
+type MethodInfo {
+    id: String
+    systemId: Int
+    methodName: String
+    moduleName: String
+    packageName: String
+    typeName: String
+}
